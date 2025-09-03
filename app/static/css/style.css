@@ -1,0 +1,5 @@
+body { font-family: Arial, sans-serif; margin: 20px; }
+.form-group { margin-bottom: 15px; }
+.result-table { border-collapse: collapse; width: 100%; }
+.result-table th, .result-table td { border: 1px solid #ddd; padding: 8px; }
+#powerbi-report { height: 500px; width: 100%; }

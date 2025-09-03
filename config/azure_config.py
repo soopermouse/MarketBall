@@ -1,0 +1,4 @@
+COSMOS_DB_ENDPOINT = "your_cosmos_db_endpoint"
+COSMOS_DB_KEY = "your_cosmos_db_key"
+COGNITIVE_SERVICES_ENDPOINT = "your_text_analytics_endpoint"
+COGNITIVE_SERVICES_KEY = "your_text_analytics_key"

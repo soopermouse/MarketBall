@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Price Comparison App</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .form-group { margin-bottom: 15px; }
+        .result-table { border-collapse: collapse; width: 100%; }
+        .result-table th, .result-table td { border: 1px solid #ddd; padding: 8px; }
+    </style>
+</head>
+<body>
+    <h1>Competitive Price Comparison</h1>
+    <form action="/submit" method="POST">
+        <div class="form-group">
+            <label>Company Name:</label>
+            <input type="text" name="company_name" required>
+        </div>
+        <h3>Competitors (up to 10)</h3>
+        {% for i in range(1, 11) %}
+        <div class="form-group">
+            <label>Competitor {{ i }} URL:</label>
+            <input type="text" name="competitor_{{ i }}">
+        </div>
+        {% endfor %}
+        <h3>Products (up to 20)</h3>
+        {% for i in range(1, 21) %}
+        <div class="form-group">
+            <label>Product {{ i }} Name:</label>
+            <input type="text" name="product_name_{{ i }}">
+            <label>Price:</label>
+            <input type="number" step="0.01" name="product_price_{{ i }}">
+        </div>
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

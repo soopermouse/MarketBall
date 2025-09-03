@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Price Comparison Results</title>
+    <style>
+        .result-table { border-collapse: collapse; width: 100%; }
+        .result-table th, .result-table td { border: 1px solid #ddd; padding: 8px; }
+    </style>
+</head>
+<body>
+    <h1>Price Comparison Results</h1>
+    {% for product, data in results.items() %}
+    <h3>{{ product }}</h3>
+    <table class="result-table">
+        <tr>
+            <th>Competitor</th>
+            <th>Price</th>
+            <th>Your Price</th>
+            <th>Recommended Price</th>
+        </tr>
+        {% for comp, price in data['competitor_prices'].items() %}
+        <tr>
+            <td>{{ comp }}</td>
+            <td>{{ price }}</td>
+            <td>{{ data['your_price'] }}</td>
+            <td>{{ data['recommended_price'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endfor %}
+    <a href="/">Back to Input</a>
+</body>
+</html>

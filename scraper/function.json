@@ -1,0 +1,18 @@
+{
+  "bindings": [
+    {
+      "name": "timer",
+      "type": "timerTrigger",
+      "direction": "in",
+      "schedule": "0 0 0 * * *"
+    },
+    {
+      "name": "outputDocument",
+      "type": "cosmosDB",
+      "direction": "out",
+      "databaseName": "PriceComparisonDB",
+      "collectionName": "CompetitorPrices",
+      "connectionStringSetting": "CosmosDBConnection"
+    }
+  ]
+}
